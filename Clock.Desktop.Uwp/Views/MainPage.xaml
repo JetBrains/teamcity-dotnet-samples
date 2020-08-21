@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="Clock.Desktop.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:desktop="using:Clock.Desktop">
+    <Page.Resources>
+        <desktop:DataProvider x:Key="ClockViewModel" ObjectType="Clock.ViewModels.IClockViewModel, Clock"/>
+    </Page.Resources>
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" DataContext="{StaticResource ClockViewModel}">
+            <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+            <TextBlock Text="{Binding It.Date}" FontSize="64" />
+            <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+            <TextBlock Text="{Binding It.Time}" FontSize="64" />
+        </StackPanel>
+    </Grid>
+</Page>

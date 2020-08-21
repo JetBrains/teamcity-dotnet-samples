@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xamarin="clr-namespace:Clock.Xamarin;assembly=Clock.Xamarin"
+             x:Class="Clock.Xamarin.Views.MainPage">
+    <ContentPage.Resources>
+        <xamarin:DataProvider x:Key="ClockViewModel" ObjectType="Clock.ViewModels.IClockViewModel, Clock"/>
+    </ContentPage.Resources>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BindingContext="{StaticResource ClockViewModel}">
+        <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+        <Label Text="{Binding It.Date}" />
+        <!-- ReSharper disable once Xaml.BindingWithContextNotResolved -->
+        <Label Text="{Binding It.Time}" />
+    </StackLayout>
+</ContentPage>
