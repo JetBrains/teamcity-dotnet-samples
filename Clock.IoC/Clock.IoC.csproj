@@ -2,10 +2,15 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.2</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>TeamCity.Clock.IoC</PackageId>
+    <RepositoryUrl>https://github.com/JetBrains/teamcity-dotnet-samples</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>teamcity dotnet .net sample</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IoC.Container" Version="1.3.2" />
+    <PackageReference Include="IoC.Container" Version="1.3.3-beta428" />
   </ItemGroup>
 
   <ItemGroup>

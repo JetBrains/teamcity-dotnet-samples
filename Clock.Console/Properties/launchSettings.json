@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "Clock.Console": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
