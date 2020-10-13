@@ -87,9 +87,9 @@ open class BuildBase(
             }
         }
         if (requiresSdk) {
-            // Agents requirement to have .NET Core SDK 3.1.402, also see global.json
+            // Agents requirement to have .NET Core SDK 5.0
             requirements {
-                exists("DotNetCoreSDK3.1.402_Path")
+                exists("DotNetCoreSDK5.0_Path")
             }
         }
         // Customize base build details
@@ -182,7 +182,7 @@ open class BuildConsoleAndWebBase(
 }
 
 // Test on Linux
-object LinuxTests: TestBase(DotnetTestStep.ImagePlatform.Linux, "mcr.microsoft.com/dotnet/core/sdk:3.1.402")
+object LinuxTests: TestBase(DotnetTestStep.ImagePlatform.Linux, "mcr.microsoft.com/dotnet/sdk:5.0")
 
 // Test on Windows
 object WindowsTests: TestBase(DotnetTestStep.ImagePlatform.Windows)
@@ -443,7 +443,7 @@ object PushConsoleUbuntu2004: PushImageBase(
         "linux",
         "console.linux.dockerfile",
         // This image contains the native dependencies needed by .NET Core. It does not include .NET Core. It is for self-contained applications.
-        "mcr.microsoft.com/dotnet/core/runtime-deps:3.1-focal",
+        "mcr.microsoft.com/dotnet/runtime-deps:5.0-focal",
         "clock-console",
         "ubuntu.20.04")
 
@@ -463,7 +463,7 @@ object PushWebUbuntu2004: PushImageBase(
         BuildConsoleAndWebLinux64,
         "linux",
         "web.linux.dockerfile",
-        "mcr.microsoft.com/dotnet/core/runtime-deps:3.1-focal",
+        "mcr.microsoft.com/dotnet/runtime-deps:5.0-focal",
         "clock-web",
         "ubuntu.20.04")
 
