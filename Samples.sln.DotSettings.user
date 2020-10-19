@@ -3,4 +3,4 @@
   &lt;Project Location="C:\Projects\TeamCity\teamcity-dotnet-samples\Clock.Tests" Presentation="&amp;lt;Clock.Tests&amp;gt;" /&gt;&#xD;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UpdatesManger/LastUpdateCheck/@EntryValue">10/12/2020 18:34:58</s:String>
-	<s:Double x:Key="/Default/Housekeeping/TreeModelBrowserPanelPersistence/PreviewSplitterVerticalProportion/=UnitTestSessionDescriptor/@EntryIndexedValue">1.4911485373797135</s:Double></wpf:ResourceDictionary>
+	</wpf:ResourceDictionary>

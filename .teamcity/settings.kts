@@ -151,12 +151,6 @@ open class BuildConsoleAndWebBase(
             }
         }
         params {
-            // The equivalent of /p:PublishTrimmed=true https://docs.microsoft.com/en-us/dotnet/core/deploying/trim-self-contained#trim-your-app---cli
-            param("system.PublishTrimmed", "true")
-
-            // The equivalent of /p:PublishSingleFile=true https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#single-file-executables
-            param("system.PublishSingleFile", "true")
-
             // The equivalent of /p:InvariantGlobalization=true
             // https://docs.microsoft.com/en-us/dotnet/core/run-time-config/globalization#invariant-mode
             // Determines whether a .NET app runs in globalization-invariant mode without access to culture-specific data and behavior. True - run in invariant mode.
@@ -168,6 +162,9 @@ open class BuildConsoleAndWebBase(
                 projects = "Clock.Console/Clock.Console.csproj"
                 runtime = runtimeId
                 outputDir = "bin/Clock.Console/$runtimeId"
+                // https://docs.microsoft.com/en-us/dotnet/core/deploying/trim-self-contained#trim-your-app---cli
+                // https://docs.microsoft.com/en-us/dotnet/core/whats-new/dotnet-core-3-0#single-file-executables
+                args = "/p:PublishTrimmed=true /p:PublishSingleFile=true"
             }
             dotnetPublish {
                 name = "Build web app"
