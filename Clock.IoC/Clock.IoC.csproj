@@ -10,7 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="IoC.Container" Version="1.3.3-beta431" />
+    <PackageReference Include="IoC.Container" Version="1.3.3" />
   </ItemGroup>
 
   <ItemGroup>
