@@ -13,13 +13,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clock.Xamarin", "Clock.Xama
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock.Xamarin.Android", "Clock.Xamarin.Android\Clock.Xamarin.Android.csproj", "{0A635765-C8EC-4F30-8A7F-D0ADA508B69E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock.IoC", "Clock.IoC\Clock.IoC.csproj", "{8216753B-5D4C-4BB1-A67E-3CF953685583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clock.IoC", "Clock.IoC\Clock.IoC.csproj", "{8216753B-5D4C-4BB1-A67E-3CF953685583}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock.Desktop.Uwp", "Clock.Desktop.Uwp\Clock.Desktop.Uwp.csproj", "{6A3D1F6F-3296-4263-849C-2AEECFCE2513}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock.Console", "Clock.Console\Clock.Console.csproj", "{B6C5559B-2609-4040-A981-AF1DB688F926}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clock.Console", "Clock.Console\Clock.Console.csproj", "{B6C5559B-2609-4040-A981-AF1DB688F926}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clock.Desktop", "Clock.Desktop\Clock.Desktop.csproj", "{C2286800-5AE9-4B83-8F32-E2AFED2D9A79}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DA43EE97-E26C-45D9-A635-D51249C65080}"
+	ProjectSection(SolutionItems) = preProject
+		context\.dockerignore = context\.dockerignore
+		context\console.linux.dockerfile = context\console.linux.dockerfile
+		context\console.windows.dockerfile = context\console.windows.dockerfile
+		docs\habr.md = docs\habr.md
+		context\web.linux.dockerfile = context\web.linux.dockerfile
+		context\web.windows.dockerfile = context\web.windows.dockerfile
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
